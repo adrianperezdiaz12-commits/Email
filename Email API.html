@@ -1,0 +1,43 @@
+<!DOCTYE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+
+    <h1>Email Validation</h1>
+
+    <input type="text" id="email">
+    <div id="error"></div>
+    <button id="button">Submit</button>
+
+    <script>
+
+        var email = document.getElementById("email");
+        var error = document.getElementById("error");
+        var button = document.getElementById("button");
+
+        function isValidEmail(email) {
+            return /^[adrianperez]+@[humber]+\.ca$/.test(email);
+        }
+
+    button.addEventListener("click", function() {
+        const email = email.value.trim();
+
+        if (!isValidEmail(email)) {
+            emailBox.style.border = "5px solid red";
+            messageDiv.textContent = "try again";
+            messageDiv.style.color = "red";
+        } else {
+            emailBox.style.border = "5px solid green";
+            messageDiv.textContent = "Welcome!";
+            messageDiv.style.color = "green";
+        }
+    });
+    
+    </script>
+
+</body>
+</html>
